@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+
+  # MongoDB
+  mongodb:
+    image: mongo:latest
+    container_name: video-transcoder-mongodb
+    restart: unless-stopped
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - transcoder-network
+    ports:
+      - "27017:27017"
+
+  # Redis for Bull MQ
+  redis:
+    image: redis:alpine
+    container_name: video-transcoder-redis
+    restart: unless-stopped
+    volumes:
+      - redis_data:/data
+    networks:
+      - transcoder-network
+    ports:
+      - "6379:6379"
+
+  # Bull Board UI for monitoring queues
+  bull-board:
+    image: deadly0/bull-board
+    container_name: video-transcoder-bull-board
+    restart: unless-stopped
+    ports:
+      - "3001:3000"
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - QUEUE_NAMES=videoTranscoding,videoTranscodingErrors
+    depends_on:
+      - redis
+    networks:
+      - transcoder-network
+
+networks:
+  transcoder-network:
+    driver: bridge
+
+volumes:
+  mongodb_data:
+  redis_data:
+  transcoder_temp:

@@ -1,0 +1,214 @@
+/* Import API component styles */
+@import './styles/ApiComponents.css';
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  color-scheme: dark;
+  color: #ffffff;
+  background-color: #000000;
+  
+  --primary-color: #ffffff;
+  --primary-color-rgb: 255, 255, 255;
+  --primary-hover: #f0f0f0;
+  --accent-color: #ffffff;
+  
+  /* Pure black theme backgrounds */
+  --bg-primary: #000000;
+  --bg-secondary: #000000;
+  --bg-tertiary: #000000;
+  --card-bg: #1F1F1F;
+  --card-bg-hover: #2A2A2A;
+  --hover-bg: rgba(255, 255, 255, 0.05);
+  
+  /* Clean text hierarchy */
+  --text-primary: #ffffff;
+  --text-secondary: #CCCCCC;
+  --text-muted: #888888;
+  
+  /* Clean borders */
+  --border-color: #1F1F1F;
+  --border-primary: #1F1F1F;
+  --border-secondary: #333333;
+  --border-hover: #333333;
+  --border-accent: #333333;
+  
+  /* Status colors */
+  --success-color: #10b981;
+  --success-color-rgb: 16, 185, 129;
+  --warning-color: #f59e0b;
+  --warning-color-rgb: 245, 158, 11;
+  --error-color: #ef4444;
+  --error-color-rgb: 239, 68, 68;
+  --danger-color: #ef4444;
+  --danger-color-rgb: 239, 68, 68;
+  
+  /* Button styles */
+  --button-bg: #1F1F1F;
+  --button-bg-hover: #2A2A2A;
+  --button-border: #1F1F1F;
+  
+  /* Shadows for dark theme */
+  --shadow-light: rgba(255, 255, 255, 0.02);
+  --shadow-medium: rgba(255, 255, 255, 0.05);
+  --shadow-sm: 0 2px 8px rgba(255, 255, 255, 0.02);
+  --shadow-lg: 0 8px 24px rgba(255, 255, 255, 0.05);
+  
+  /* Additional status colors */
+  --info-color: #3b82f6;
+  --info-color-rgb: 59, 130, 246;
+  
+  /* Overlay colors */
+  --overlay-light: rgba(255, 255, 255, 0.1);
+  --overlay-medium: rgba(255, 255, 255, 0.08);
+  --overlay-dark: rgba(255, 255, 255, 0.06);
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+  
+  /* Additional variables used in components */
+  --bg-card-hover: #2A2A2A;
+  --radius-lg: 12px;
+  --radius-md: 8px;
+  --radius-xl: 16px;
+  --transition-normal: 0.2s ease;
+  --text-inverse: #000000;
+  
+  /* Spacing variables */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  color-scheme: light;
+  color: #1e293b;
+  background-color: #ffffff;
+  
+  --primary-color: #0f172a;
+  --primary-color-rgb: 15, 23, 42;
+  --primary-hover: #334155;
+  --accent-color: #0f172a;
+  
+  /* Light theme backgrounds */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --card-bg: #ffffff;
+  --card-bg-hover: #f8fafc;
+  --hover-bg: rgba(0, 0, 0, 0.05);
+  
+  /* Clean text hierarchy */
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  
+  /* Clean borders */
+  --border-color: #e2e8f0;
+  --border-primary: #e2e8f0;
+  --border-secondary: #cbd5e1;
+  --border-hover: #cbd5e1;
+  --border-accent: #94a3b8;
+  
+  /* Status colors */
+  --success-color: #10b981;
+  --success-color-rgb: 16, 185, 129;
+  --warning-color: #f59e0b;
+  --warning-color-rgb: 245, 158, 11;
+  --error-color: #ef4444;
+  --error-color-rgb: 239, 68, 68;
+  --danger-color: #ef4444;
+  --danger-color-rgb: 239, 68, 68;
+  
+  /* Button styles */
+  --button-bg: #f8fafc;
+  --button-bg-hover: #f1f5f9;
+  --button-border: #e2e8f0;
+  
+  /* Shadows for light theme */
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  
+  /* Additional status colors */
+  --info-color: #3b82f6;
+  --info-color-rgb: 59, 130, 246;
+  
+  /* Overlay colors */
+  --overlay-light: rgba(0, 0, 0, 0.1);
+  --overlay-medium: rgba(0, 0, 0, 0.08);
+  --overlay-dark: rgba(0, 0, 0, 0.06);
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+  
+  /* Additional variables used in components */
+  --bg-card-hover: #f8fafc;
+  --radius-lg: 12px;
+  --radius-md: 8px;
+  --radius-xl: 16px;
+  --transition-normal: 0.2s ease;
+  --text-inverse: #ffffff;
+  
+  /* Spacing variables */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--primary-hover);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--button-bg);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+button:hover {
+  background-color: var(--button-bg-hover);
+  border-color: var(--border-hover);
+}
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}

@@ -1,0 +1,233 @@
+/* Overview Section Styles */
+
+.overview-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Stats Grid Styles */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--bg-primary);
+  border: 2px solid var(--border-secondary);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+.stat-card:hover {
+  border-color: var(--border-primary);
+  box-shadow: 0 8px 24px var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+.stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  color: var(--text-primary);
+}
+
+.stat-icon.success {
+  background: rgba(var(--success-color-rgb), 0.15);
+  color: var(--success-color);
+}
+
+.stat-icon.warning {
+  background: rgba(var(--warning-color-rgb), 0.15);
+  color: var(--warning-color);
+}
+
+.stat-icon.error {
+  background: rgba(var(--danger-color-rgb), 0.15);
+  color: var(--danger-color);
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 4px 0 0 0;
+  font-weight: 500;
+}
+
+/* Recent Jobs Section */
+.recent-jobs-section {
+  margin-top: 3rem;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.settings-card {
+  background: var(--bg-primary);
+  border: 2px solid var(--border-secondary);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+.settings-card:hover {
+  border-color: var(--border-primary);
+  box-shadow: 0 8px 24px var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.meta-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.meta-value {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.meta-date {
+  font-size: 13px;
+}
+
+.thumbnails-indicator {
+  font-size: 12px;
+  color: var(--success-color);
+  background: rgba(var(--success-color-rgb), 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* Status Badge Styles for Overview */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-badge.pending {
+  background: rgba(var(--warning-color-rgb), 0.1);
+  color: var(--warning-color);
+  border: 1px solid rgba(var(--warning-color-rgb), 0.3);
+}
+
+.status-badge.processing {
+  background: rgba(var(--primary-color-rgb), 0.1);
+  color: var(--primary-color);
+  border: 1px solid rgba(var(--primary-color-rgb), 0.3);
+}
+
+.status-badge.completed {
+  background: rgba(var(--success-color-rgb), 0.1);
+  color: var(--success-color);
+  border: 1px solid rgba(var(--success-color-rgb), 0.3);
+}
+
+.status-badge.failed {
+  background: rgba(var(--danger-color-rgb), 0.1);
+  color: var(--danger-color);
+  border: 1px solid rgba(var(--danger-color-rgb), 0.3);
+}
+
+/* Section Actions */
+.section-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+  }
+  
+  .settings-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

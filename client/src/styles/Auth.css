@@ -1,0 +1,15 @@
+/* Auth Component Styles */
+
+/* OAuth button icons */
+.oauth-btn svg {
+  margin-right: 8px;
+}
+
+.oauth-btn .lucide {
+  margin-right: 8px;
+}
+
+/* Arrow icon rotation for sign in button */
+.auth-button .arrow-icon-rotated {
+  transform: rotate(180deg);
+}
